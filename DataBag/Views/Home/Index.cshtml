@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout="";
+}
+
+<!--Llamar variable con razor-->
+
+@ViewBag.Nombre
+@ViewData["Apellido"]
+@TempData["Usuario"]
+
+<ul>
+
+    @foreach (string Fruta in (List<string>)ViewData["Frutas"])
+{
+    <li>@Fruta</li>
+}
+
+</ul>
+
+<ul>
+
+    @foreach (string Fruta in ViewBag.Frutas)
+{
+    <li>@Fruta</li>
+}
+
+</ul>
+
+<ul>
+
+    @foreach (string Fruta in (List<String>)TempData["Frutas"])
+{
+    <li>@Fruta</li>
+}
+
+</ul>
