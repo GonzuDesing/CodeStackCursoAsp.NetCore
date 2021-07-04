@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mCWXyNmX/Yqc37Ut4nLi9NnvngaQBIG3BRRnt9u+ikdW+LxItD+WRP9JipE6v+n07IXTLZo428Gjn5tRYWgyIw==",
+  "dgSpecHash": "gMBrZvqiNmzNvqJc1bbv4neWuuzCpmEzzz739FBIMnMJolpvUeGVQVqwGdggXMzbgVHstd3teX02KuBeVyZVdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\.NetCore\\CodeStack\\Proyectos\\CodeStack-ASP.NETCORE-MVC\\HolaMundo\\HolaMundo.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\.NetCore\\CodeStack\\Proyectos\\CodeStackCursoAsp.NetCore\\HolaMundo\\HolaMundo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
