@@ -31,10 +31,54 @@ namespace DataBag.Controllers
           };
 
             ViewData["Frutas"] = Frutas;
-            ViewBag.Frutas=Frutas;
-            TempData["Frutas"]=Frutas;
+            ViewBag.Frutas = Frutas;
+            TempData["Frutas"] = Frutas;
             return View();
         }
+
+//Creamos un controllador completo para la clase(modelo) usuario
+        public IActionResult Usuarios()
+        {
+            ViewData["Usuarios"] = new List<Usuario>()
+
+           // List<Usuario> Usuarios = new List<Usuario>()
+            {
+                new Usuario()
+                {
+                    Nombre="Jose Carlos",
+                    Apellido="Gonzalez Ulate",
+                    Correo="gonzu.desing@gmail.com",
+                    Edad=24
+
+                },
+
+                 new Usuario()
+                {
+                    Nombre="Noah",
+                    Apellido="Gonzalez Guzman",
+                    Correo="noah.desing@gmail.com",
+                    Edad=18
+
+                },
+
+                 new Usuario()
+                {
+                    Nombre="Valeria",
+                    Apellido="Arias Castro",
+                    Correo="vale.desing@gmail.com",
+                    Edad=18
+
+                }
+
+            };
+
+//El viewdata se puede instanciar al inicio o igualar al final
+            //ViewData["Usuarios"]=Usuarios;
+            return View();
+        }
+
+
+
 
         public IActionResult Privacy()
         {

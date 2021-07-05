@@ -1,0 +1,41 @@
+
+//Sino funcionara utilizamos los using con el arroba de razor
+//using  Databag.Models; 
+
+@{
+    //necesito convertir el view data a UN tipo list<>
+    List<Usuario> Usuarios = (List<Usuario>)ViewData["Usuarios"];
+    //saco el numero total de registros ppara recorrerlo con un for
+    int Total = Usuarios.Count;
+
+}
+
+<table class="table table-striped table-bordered">
+    <header>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Edad</th>
+
+        </tr>
+
+    </header>
+    <tbody>
+        @for (int i = 0; i <= Total - 1; i++)
+        {
+            <tr>
+
+                <td>@Usuarios[i].Nombre</td>
+                <td>@Usuarios[i].Apellido</td>
+                <td>@Usuarios[i].Correo</td>
+                <td>@Usuarios[i].Edad</td>
+
+            </tr>
+        }
+
+    </tbody>
+
+
+
+</table>

@@ -9,6 +9,8 @@
 @ViewData["Apellido"]
 @TempData["Usuario"]
 
+
+<!--Es necesario parsearlo-->
 <ul>
 
     @foreach (string Fruta in (List<string>)ViewData["Frutas"])
@@ -28,7 +30,7 @@
 </ul>
 
 <ul>
-
+<!--Este necesita ser convertido un parseo--->
     @foreach (string Fruta in (List<String>)TempData["Frutas"])
 {
     <li>@Fruta</li>
