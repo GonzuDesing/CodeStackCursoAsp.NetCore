@@ -16,6 +16,8 @@ List<int> Numeros = new List<int>()
 
 }
 
+<div class="container-lg" style="background-color: cornflowerblue; border-radius: 50px;">
+
 
 <ul>
 @foreach (int Numero in Numeros)
@@ -34,13 +36,24 @@ if (Numero % 2 == 0)
 
 </ul>
 
+
+
+</div>
+
+<div class="container-md"" style="background-color: aliceblue;">
 <ul>
-@for (int j = 0; j <= Numeros.Count -1; j++)
-{
-    <li>@Numeros[j]</li>
-}
+        @for (int j = 0; j <= Numeros.Count - 1; j++)
+        {
+        <li>@Numeros[j]</li>
+        }
 
 </ul>
+
+
+</div>
+
+<div class="container-fluid" style="background-color: beige;">
+
 
 @switch (Dia)
 {
@@ -70,4 +83,7 @@ if (Numero % 2 == 0)
 
     
 }
+
+</div>
+
 
