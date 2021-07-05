@@ -1,11 +1,73 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-    //si vacio la variable layout asi ya no utilizaria ninguna plantilla
-    //Es until para paginas de inicio de sesion
-    Layout ="_Layout";
+﻿
+
+@{
+//se declaran viariables y demas igual que en c#
+int i =2;
+List<int> Numeros = new List<int>()
+    {
+    
+    1,2,3,4,5,6,7,8
+    
+    
+    };
+
+    int a=5*i;
+    int Dia =2;
+
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<ul>
+@foreach (int Numero in Numeros)
+{//las estructuras de control no ocupa el arroba
+//si el numero es par
+if (Numero % 2 == 0)
+{
+    if (Numero<5)
+    {
+          <li>@Numero</li>
+    }
+          
+}
+    
+}  
+
+</ul>
+
+<ul>
+@for (int j = 0; j <= Numeros.Count -1; j++)
+{
+    <li>@Numeros[j]</li>
+}
+
+</ul>
+
+@switch (Dia)
+{
+    //Tres formas diferentes de de presentar el texto plano
+    case 1:
+  @:Lunes;
+    break;
+
+    case 2:
+    <span>Martes</span>;
+    
+    break;
+    
+    case 3:
+     @("Miercoles");
+    break;
+
+//Puedo utilizar html.raw() que este lo que hace es muestra html  codificado
+
+    case 4:
+     @Html.Raw("<label>Miercoles</label>");
+    break;
+    
+    
+   
+  
+
+    
+}
+
