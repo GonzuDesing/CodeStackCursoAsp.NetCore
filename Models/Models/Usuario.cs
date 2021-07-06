@@ -42,6 +42,7 @@ namespace Models
         [Required(ErrorMessage = "Escriba su Correo.")]
         //Tiene que ser un correo obligatoriamente
         [EmailAddress(ErrorMessage ="Escriba un correo valido.")]
+        
 
         public string Correo { get; set; }
 

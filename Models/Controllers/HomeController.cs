@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models.Models;
-
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 namespace Models.Controllers
 {
     public class HomeController : Controller
@@ -23,15 +23,24 @@ namespace Models.Controllers
             return View();
         }
 
+
+
+
+        [BindProperty]
+
+
+        //poner publico al objeto de enlace       
+        public Usuario _Usuario { get; set; }
+
+        //EL METDODO DEBE DE EXISTIR A RENDERISAR EL ACCTION
+        public IActionResult setUsuario()
+        {
+            return Json(_Usuario);
+        }
         public IActionResult Privacy()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
